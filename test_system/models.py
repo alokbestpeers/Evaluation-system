@@ -18,7 +18,7 @@ class Candidate(models.Model):
 class Questions(models.Model):
     question = models.CharField(max_length=100)
     answer = models.TextField()
-    technology = models.ManyToManyField(Technology, related_name='technology')
+    technology = models.ManyToManyField(Technology, related_name='questions')
 
     def __str__(self):
         return self.question
